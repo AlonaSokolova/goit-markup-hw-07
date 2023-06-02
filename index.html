@@ -25,6 +25,11 @@
             <li class="menu-item"><a class="menu-link link" href="">Contacts</a></li>
         </ul>
     </nav>
+    <button type="button" class="mobile-menu-open-btn js-open-menu">
+        <svg class="mobile-menu-open-btn-icon" width="22" height="22">
+          <use href="./images/icon/sprite.svg.svg#icon-burger"></use>
+        </svg>
+      </button>
     <address class="adress">
     <ul class="contact list ">
             <li class="contact-item"><a class="adress-contact link" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
@@ -32,12 +37,80 @@
     </ul>
     </address>
     </div>
+    <div class="mobile-menu js-menu-container">
+        <div class="container mobile-menu-container">
+            <button class="mobile-menu-close-btn js-close-menu">
+              <svg class="mobile-menu-close-icon" width="8" height="8">
+                <use href="./images/icons.svg#icon-close"></use>
+              </svg>
+            </button>
+            <ul class="site-nav-mobile list">
+              <li class="site-nav-link-mobile">
+                <a
+                  class="menu-link-mobile current-mobile link"
+                  href="./index.html"
+                  >Studio</a>
+              </li>
+              <li class="site-nav-link-mobile link">
+                <a class="menu-link-mobile link" href="./portfolio.html"
+                  >Portfolio</a>
+              </li>
+              <li class="site-nav-link-mobile">
+                <a class="menu-link-mobile link" href="">Contacts</a>
+              </li>
+            </ul>
+            
+            <address class="nav-address-mobile">
+              <ul class="address-mobile list">
+                <li class="contacts-mobile mob-item">
+                  <a class="contacts-mobile-tel color-contacts link" href="tel:+110001111111">+11 (000) 111-11-11</a>
+                </li>
+                <li class="contacts-mobile mob-item">
+                  <a class="contacts-mobile-email color-contacts link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                </li>
+              </ul>
+            </address>
+            <div class="mobile-social-links"> 
+              <ul class="mobile-social-list list">
+                <li class="social-icon-item">
+                  <a href="" class="social-icon-item-link">
+                    <svg class="social-icon-item-link-svg" width="24" height="24">
+                      <use href="./images/icons.svg#icon-instagram-2"></use>
+                      </svg>
+                  </a>
+                </li>
+                <li class="social-icon-item">
+                  <a href="" class="social-icon-item-link">
+                    <svg class="social-icon-item-link-svg" width="24" height="24">
+                      <use href="./images/icons.svg#icon-twitter-1-1"></use>
+                      </svg>
+                  </a>
+                </li>
+                <li class="social-icon-item">
+                  <a href="" class="social-icon-item-link">
+                    <svg class="social-icon-item-link-svg" width="24" height="24">
+                      <use href="./images/icons.svg#icon-facebook-1-1"></use>
+                      </svg>
+                  </a>
+                </li>
+                <li class="social-icon-item">
+                  <a href="" class="social-icon-item-link">
+                    <svg class="social-icon-item-link-svg" width="24" height="24">
+                      <use href="./images/icons.svg#icon-linkedin-1-1"></use>
+                      </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+        </div>
+      </div>
 </header> 
+
 <main class="main-page">
    <section class="feauter-one ">
     <div class="container">
         <h1 class="main-header">Effective Solutions for Your Business</h1>
-        <button class="button" type="button" data-modal-open>Order Service</button>
+        <button class="button" type="button" name="button1" data-modal-open>Order Service</button>
     </div>
    </section>
    <section class="feauter-two section-feauter">
@@ -84,12 +157,12 @@
         </ul>
     </div>
     </section>
-    <section class="feauter-three section-feauter">
+   <section class="feauter-three section-feauter">
         <div class="container">
         <h2 class="section-header">What are we doing</h2>
         <ul class="work-items list">
         <li class="work-item work-team">
-            <img class="section-img" src="./images/img1.jpg" alt="computer" width="360">
+            <img srcset="./images/img1.jpg 1x, ./images/img1@2x.jpg 2x" class="section-img" src="./images/img1.jpg" alt="computer" width="360">
         </li>
         <li class="work-item work-team">
             <img class="section-img" src="./images/img2.jpg" alt="phone" width="360">
@@ -99,9 +172,9 @@
         </li>
         </ul>
         </div>
-    </section>
+    </section> 
     
-    <section class="feauter-four section-feauter">
+   <!-- <section class="feauter-four section-feauter">
         <div class="container">
             <h2 class="section-header-title">Our Team</h2>
             <ul class="section-header-list list">
@@ -239,8 +312,8 @@
                 </li>
             </ul>
         </div>
-    </section>
-    <section class="company">
+    </section> -->
+   <!-- <section class="company">
         <div class="container">
           <h2 class="company-title">Customers</h2>
           <ul class="social-company-list list">
@@ -289,9 +362,9 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
 </main>
-<footer class="footer">
+<!-- <footer class="footer">
     <div class="container total-footer-container" >
         <div class="footer-container-logo">
         <a class="logo link logo-footer" href="./index.html">Web<span class="studio-logo-footer">Studio</span></a>
@@ -341,7 +414,7 @@
             </form>
         </div>
     </div>
-</footer>
+</footer> -->
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
             <button type="button" class="modal-close-btn" data-modal-close>
@@ -406,7 +479,9 @@
     </div>
     
 
-<script src="./js/modal.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js" integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA==" crossorigin="anonymous"></script>
+    <script defer src="./js/mobile-menu.js"></script>
+    <script src="./js/modal.js"></script>
 </body>
 
 </html>
